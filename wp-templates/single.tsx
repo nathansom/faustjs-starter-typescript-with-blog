@@ -60,9 +60,12 @@ export default function Component(props) {
     return <>Loading...</>;
   }
 
-  const { post } = useFaustQuery(GET_POST_QUERY);
-  const { generalSettings, headerMenuItems, footerMenuItems } =
-    useFaustQuery(GET_LAYOUT_QUERY);
+  const { post } = useFaustQuery < { post: any }>(GET_POST_QUERY);
+  const { generalSettings, headerMenuItems, footerMenuItems } = useFaustQuery<{
+    generalSettings: any;
+    headerMenuItems: any;
+    footerMenuItems: any;
+  }>(GET_LAYOUT_QUERY);
 
   const { title: siteTitle, description: siteDescription } = generalSettings;
   const primaryMenu = headerMenuItems?.nodes ?? [];

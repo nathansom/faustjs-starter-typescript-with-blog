@@ -10,20 +10,21 @@
     "start": "faust start"
   },
   "dependencies": {
-    "@apollo/client": "^3.10.4",
+    "@apollo/client": "^3.11.1",
     "@faustwp/cli": "^3.0.2",
     "@faustwp/core": "^3.0.3",
-    "@wordpress/base-styles": "^4.49.0",
-    "@wordpress/block-library": "^7.19.0",
+    "@wordpress/base-styles": "^5.4.0",
+    "@wordpress/block-library": "^9.4.0",
     "classnames": "^2.5.1",
-    "graphql": "^16.8.1",
-    "next": "^12.3.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "sass": "^1.77.3"
+    "graphql": "^16.9.0",
+    "next": "^14.2.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "next-secure-headers": "^2.2.0"
+    "next-secure-headers": "^2.2.0",
+    "sass": "^1.77.8",
+    "typescript": "^5.5.4"
   },
   "engines": {
     "node": ">=18",

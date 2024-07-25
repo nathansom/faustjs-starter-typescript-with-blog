@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { FeaturedImage } from '../FeaturedImage';
-import { PostInfo } from '../PostInfo';
-import styles from './Post.module.scss';
+import Link from "next/link";
+import { FeaturedImage } from "../FeaturedImage";
+import { PostInfo } from "../PostInfo";
+import styles from "./Post.module.scss";
 
 export default function Post({
   title,
@@ -15,20 +15,16 @@ export default function Post({
     <article className={styles.component}>
       {featuredImage && (
         <Link href={uri}>
-          <a>
-            <FeaturedImage
-              image={featuredImage}
-              layout="responsive"
-              className={styles.featuredImage}
-            />
-          </a>
+          <FeaturedImage
+            image={featuredImage}
+            layout="responsive"
+            className={styles.featuredImage}
+          />
         </Link>
       )}
 
       <Link href={uri}>
-        <a>
-          <h2>{title}</h2>
-        </a>
+        <h2>{title}</h2>
       </Link>
       <PostInfo date={date} author={author} className={styles.postInfo} />
       <div

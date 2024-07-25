@@ -13,12 +13,12 @@ module.exports = withFaust({
     domains: [getWpHostname()],
   },
   i18n: {
-    locales: ['en'],
+    locales: ['en','th'],
     defaultLocale: 'en',
   },
   async headers() {
     return [{ source: '/:path*', headers: createSecureHeaders({
-      xssProtection: false
+      xssProtection: "sanitize"
     }) }];
   },
 });

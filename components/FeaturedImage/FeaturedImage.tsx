@@ -1,5 +1,5 @@
-import { gql } from '@apollo/client';
-import Image from 'next/image';
+import { gql } from "@apollo/client";
+import Image from "next/image";
 export default function FeaturedImage({
   image,
   width,
@@ -8,20 +8,27 @@ export default function FeaturedImage({
   priority,
   layout,
   ...props
+}: {
+  image: FeaturedImage;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  layout?: string;
 }) {
   const src = image?.sourceUrl;
-  const { altText } = image || '';
+  const { altText } = image || {};
 
   width = width ? width : image?.mediaDetails?.width;
   height = height ? height : image?.mediaDetails?.height;
-  layout = layout ?? 'fill';
+  layout = layout ?? "fill";
 
   return src && width && height ? (
     <figure className={className}>
       <Image
         src={src}
         alt={altText}
-        layout={layout}
+        layout={width ? undefined : layout}
         width={width}
         height={height}
         priority={priority}
