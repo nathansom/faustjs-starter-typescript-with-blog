@@ -10,7 +10,7 @@
     "start": "faust start"
   },
   "dependencies": {
-    "@apollo/client": "^3.11.1",
+    "@apollo/client": "^3.11.5",
     "@faustwp/cli": "^3.0.2",
     "@faustwp/core": "^3.0.3",
     "@wordpress/base-styles": "^5.4.0",
